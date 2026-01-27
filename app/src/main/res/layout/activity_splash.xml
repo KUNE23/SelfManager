@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1976D2">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/splash_logo_background"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/logo_background" 
+        app:layout_constraintBottom_toTopOf="@+id/splash_app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/splash_logo_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_wallet_icon"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/splash_logo_background"
+        app:layout_constraintEnd_toEndOf="@+id/splash_logo_background"
+        app:layout_constraintStart_toStartOf="@+id/splash_logo_background"
+        app:layout_constraintTop_toTopOf="@+id/splash_logo_background" />
+
+    <!-- App Name and Tagline -->
+    <TextView
+        android:id="@+id/splash_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SelfManager"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/splash_tagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splash_logo_background" />
+
+    <TextView
+        android:id="@+id/splash_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Manage your life, one step at a time"
+        android:textColor="#B3E5FC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/splash_initializing_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splash_app_name" />
+
+    <!-- Progress Section -->
+    <TextView
+        android:id="@+id/splash_initializing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="INITIALIZING"
+        android:textColor="#B3E5FC"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/splash_progress_bar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_progress_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="45%"
+        android:textColor="#B3E5FC"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/splash_initializing_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/splash_initializing_text" />
+
+    <ProgressBar
+        android:id="@+id/splash_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:progress="45"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/splash_security_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_security_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_shield"
+        app:layout_constraintBottom_toBottomOf="@+id/splash_security_text"
+        app:layout_constraintEnd_toStartOf="@+id/splash_security_text"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/splash_security_text"
+        app:tint="#B3E5FC" />
+
+    <TextView
+        android:id="@+id/splash_security_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="BANK-GRADE SECURITY ENABLED"
+        android:textColor="#B3E5FC"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/splash_security_icon"
+        tools:ignore="SmallSp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
